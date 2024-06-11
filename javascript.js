@@ -85,7 +85,142 @@ DataTypes in JavaScript
 note - A same variable can be re-assigned different values of different data types.
      - For exponential data type - number followed by e followed by power example - 123e5, 123e-5
 
+Function in JS
 
+Syntax - function f_name(parameters separated by comma) {
+            //code to be executed
+         }
+Calling a function - f_name(parameters);
+
+
+
+
+
+
+
+
+Object in JS
+
+To define properties of a thing, we use object.
+Syntax - 
+1. Direct declaration - const object_name = {property1 : value1, property2: value2 ... propertyx : valuex};
+2. Using new Keyword - 
+
+Implementation of 1
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+person.fullname(); - it will execute as a function
+person.fullname; - it will return the function defination.
+
+Implementation of 2
+const person = new Object();
+
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+note- You can get value/property - for example - person.firstname; or person["firstname"]
+    - Value are also called property.
+    - Methods are Functions stored as property.
+
+
+Adding new properties
+object_name.key = "value";
+
+Deleting new properties
+delete object_name.key;
+
+Display values of an Object
+text = ""
+for (let x in person) {
+    text += person[x] + " ";
+}
+
+Create Array from Object Values
+Object.values(Object_name)
+
+Simplify loops
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+let text = "";
+for (let [fruit, value] of Object.entries(fruits)) {
+  text += fruit + ": " + value + "<br>";
+}
+OUTPUT - Bananas: 300
+         Oranges: 200
+         Apples: 500
+
+JSONify the object
+JSON.stringify(person);
+
+Nested Objects
+myObj = {
+  name:"John",
+  age:30,
+  myCars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+
+to access the nested object
+myObj.myCars.car2;
+
+
+
+
+
+
+JavaScript Events
+
+<button onclick = "document.getElementById('demo').innerHTML = Date()">The Time is?</button>
+In the example above, the JavaScript code changes the content of the element with id="demo".
+
+<button onclick = "this.innerHTML = Date()">The time is?</button>
+In the example above, the code changes the content of its own element (using this.innerHTML):
+
+<button onclick="displayDate()">The time is?</button>
+In the example above, the code displays the date when a button is clicked.
+
+Common HTML Elements
+onchange	 - An HTML element has been changed
+onclick	The  - user clicks an HTML element
+onmouseover	 - The user moves the mouse over an HTML element
+onmouseout	 - The user moves the mouse away from an HTML element
+onkeydown	 - The user pushes a keyboard key
+onload	     - The browser has finished loading the page
+
+
+
+
+
+Strings
+
+to find length of a string use str_var.length;
+to find character at i'th index use str_var.charAt(i);
+to get utf-16 code of the character at i'th index use str_var.charCodeAt(i);
+
+for adding quotes to string and not to confuse whether it string has ended or not use.
+for double quotes use \" word\"
+for single quotes use \' word \'
+for backslash(\) use \\
+
+escape characters
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator
 
 
 
