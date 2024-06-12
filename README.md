@@ -26,7 +26,7 @@ npm (>=6.x) or yarn (>=1.x)
 Installation
 Clone the repository:
 Copy code
-```git clone https://github.com/your-username/your-project-name.git```
+```bashgit clone https://github.com/your-username/your-project-name.git```
 Navigate to the project directory:
 Copy code
 ```cd frontend```
